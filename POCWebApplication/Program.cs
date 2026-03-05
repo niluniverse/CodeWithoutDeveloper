@@ -1,3 +1,5 @@
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,15 +7,7 @@ builder.Services.AddControllers();
 
 // Configure Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
-    {
-        Title = "POC Web Application API",
-        Version = "v1",
-        Description = "A sample ASP.NET Core Web API"
-    });
-});
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
